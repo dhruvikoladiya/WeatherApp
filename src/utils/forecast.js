@@ -21,8 +21,8 @@ const forecast=(longitude,latitude,callback)=>{
         }else if(body.error){
             callback('Unable to find data!.',undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out. It feelslike ' + body.current.feelslike + ' degrees out.')
-        }
+            callback(undefined,body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out. It feelslike ' + body.current.feelslike + ' degrees out.wind_speed is ' + body.current.wind_speed)
+        } 
     })
 }
 
